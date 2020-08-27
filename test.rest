@@ -1,0 +1,17 @@
+
+
+//auth login check
+post https://127.0.0.1:8000/api/login_check
+content-type: application/json
+
+{
+    "username": "nico.riot@free.fr",
+    "password": "pass"
+}
+
+###
+
+
+//recup des messages
+get https://127.0.0.1:8000/api/messages
+//Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTg1MjkxMzIsImV4cCI6MTU5ODUzMjczMiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoibmljby5yaW90QGZyZWUuZnIifQ.Y_-CnswC_rbYqvcubqv1voL1Im1_uQKvzMZi6Drs5_Yd13DKpFnEEU8Gety-3zVQtF3xZus4AQWXhyhZ3aE2B2R3BBtUFdrLRCtRYoG0lQIauxEr3kdE3SdazB0GxPrMEFL7CcD6y-g8LmTKPEzpYAFdpKUEyMv8oit7gSCKqn7oQoAFmBcLGJcArcvDO9T5y0MKQEDWeVrQqPF_4RKgYD7IyvGFG_ZdXjc4bYfW5vzZHHmGlgPV-WrvqdTmcpbSzTrFpsHsKXzj4yRmqSU3i57k7M1NTBV3XYaEMMY5anSC_OWLKZEY09zaj-MFz6O0VM8BUfF3cB_biF4X9ASnR_hHCIXpkgLrx1EAJXRCxTc6ceTzGOlEgYXJNTvqezfmM3JLe0WVLDiw0WaoVznopaUc2z0dGmYOSfJoEfB7NF3Rb002_glPlBGH9gt30beMAMJHBFMMKQGE9zwTqingZC8kDBBLYUXoEO2lMBMMHHU2CzA7Ue9fzF-cJSQX8yJfGWxV-wD4zYSZ7eA0ugNkMUtSq9glxfKJngKD6Q6QMm5tISounZXCsK03BLnBd73_vWIvCNXuN-BR2oyaupmsDY9ZxO8O1EX6I2u1KAnVX5blGuitrgR4M0CUCWdvuHpuHC-nEs9WAEvqlOiFJQuIakW9t6D__L7TsMXFQngAl4s
