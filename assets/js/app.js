@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from "react-dom";
+import NavBar from "./components/NavBar";
+import { HashRouter, Switch, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage"
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -9,14 +12,43 @@ import ReactDOM from "react-dom";
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.css';
-console.log("test")
+import ContactPage from './pages/ContactPage';
+import Footer from './components/Footer';
+
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
 
-const App = ()=>{
-    return <h1>Hello world</h1>
+const App = () => {
+
+    return (
+
+        <HashRouter>
+            <NavBar />
+
+
+            <main className="container">
+                <Switch>
+                    <Route path="/contact" component={ContactPage} />
+                    <Route path="/" component={HomePage} />
+
+
+                </Switch>
+
+            </main>
+
+
+            <Footer/>
+
+        </HashRouter>
+
+
+
+
+    )
+
+
 }
 
 const rootElement = document.querySelector("#app");
-ReactDOM.render(<App/>,rootElement)
+ReactDOM.render(<App />, rootElement)

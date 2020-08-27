@@ -1,0 +1,59 @@
+import { faEnvelope, faHome } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import {
+    Link
+} from "react-router-dom";
+
+const home = <FontAwesomeIcon icon={faHome} />
+const env = <FontAwesomeIcon icon={faEnvelope} />
+
+
+const NavBar = () => {
+
+    const text = {
+        color: "#424242",
+        fontFamily:" Lato",
+        fontSize: "60px",
+        textAlign: "center",
+    };
+
+
+    return (
+        <>
+
+            <nav className="navbar navbar-expand-lg navbar-dark bg-ligth sticky-top">
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                <div className="collapse navbar-collapse _navBar" id="navbarColor01">
+                    <ul className="navbar-nav w-100">
+
+                        <li className="nav-item  mr-auto pl-5 ">
+                            
+                            <Link to="/" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{home} <span className="mx-3">Acceuil</span></Link>
+                        </li>
+
+                        <li className="nav-item  mx-auto pl-5 ">
+                            <h2 className=" h2 text-bold text-dark" style={text} >Develloper Web</h2>
+                        </li>
+
+                        <li className="nav-item ml-auto pr-5 d-flex align-items-center">
+
+                            <Link to="/contact" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{env} <span className="mx-3">Contact</span></Link>
+                        </li>
+
+                    </ul>
+                    
+
+                    
+
+                </div>
+            </nav>
+
+        </>
+    );
+}
+
+export default NavBar;
