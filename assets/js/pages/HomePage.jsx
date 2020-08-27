@@ -1,5 +1,6 @@
 import React from 'react';
 import Presentation from '../components/Presentation';
+import Tech from '../components/Tech';
 
 
 
@@ -10,9 +11,9 @@ const HomePage = () => {
         <>
         <Presentation />
         <hr className="mt-1 mb-5 bg-dark shadow w-75" />
-        {/* <Tech />
+        <Tech />
         <hr className="mt-1 mb-5 bg-dark shadow w-75" />
-        <Realisation/>
+        {/* <Realisation/>
         <hr className="mt-1 mb-5 bg-dark shadow w-75" /> */}
         </>
     );
