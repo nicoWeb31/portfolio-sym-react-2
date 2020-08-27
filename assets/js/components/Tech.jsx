@@ -11,6 +11,12 @@ const less = <FontAwesomeIcon icon={faMinus} />
 
 const Tech = () => {
 
+        //state
+        const [hover, setHover] = useState(false);
+        const [loading, setLoading] = useState(false);
+        const [showPluss, setShowPlus] = useState(false);
+    
+
 
 
     const stylePhoto = {
@@ -47,10 +53,6 @@ const Tech = () => {
     }
 
 
-    //state
-    const [hover, setHover] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const [showPluss, setShowPlus] = useState(false);
 
     const toggleHover = () => {
         setHover(!hover)

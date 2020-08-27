@@ -10,6 +10,13 @@ const less = <FontAwesomeIcon icon={faMinus} />
 
 const Presentation = () => {
 
+    //state
+    const [hover, setHover] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [showPluss, setShowPlus] = useState(false);
+
+
+
 
     const photoStyle = {
         width: '200px',
@@ -18,6 +25,7 @@ const Presentation = () => {
 
     let linkBorder;
     if (hover) {
+
         linkBorder = {
             border: '#9933cc 1px solid',
             transition: '1s'
@@ -43,20 +51,22 @@ const Presentation = () => {
     }
 
 
-    //state
-    const [hover, setHover] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const [showPluss, setShowPlus] = useState(false);
 
-    const toggleHover = () => {
-        setHover(!hover)
+    const toggleHoverIn = () => {
+        setHover(true)
+        console.log(hover)
+    }
+
+    const toggleHoverOff = () => {
+        setHover(false)
+        console.log(hover)
     }
 
 
     return (
 
         <>
-            <div className="container p-4" onMouseEnter={toggleHover} onMouseLeave={toggleHover} style={linkBorder}>
+            <div className="container p-4" onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} style={linkBorder}>
                 <h1 className="text-center">“A propos de moi”</h1>
 
                 <div className="row mt-5">
