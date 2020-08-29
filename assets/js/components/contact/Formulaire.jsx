@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Field from '../form/Field';
 import messageService from "../../service/messageService"
-import { Link } from 'react-router-dom';
+
+
+import "./contact.css"
 
 
 const Formulaire = () => {
@@ -18,19 +20,6 @@ const Formulaire = () => {
         console.log(hover)
     }
 
-
-
-    let linkBorder;
-    if (hover) {
-
-        linkBorder = {
-            border: '#9933cc 1px solid',
-            transition: '1s'
-        }
-
-    } else {
-        linkBorder = {}
-    }
 
     const [message, setMessage] = useState({
         firstName: "",
@@ -61,7 +50,13 @@ const Formulaire = () => {
             const response = await messageService.create(message);
             //toast.success("le client a bien été crée ! ")
             //history.replace("/customers");*
-            console.log(response)
+            console.log(response);
+            setMessage({
+                firstName: "",
+                lastName: "",
+                email: "",
+                message: ""
+            })
 
 
         } catch (err) {
@@ -82,8 +77,8 @@ const Formulaire = () => {
     return (
         <>
 
-            <div className="container p-4" onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} style={linkBorder}>
-                <h2 className="text-center">Laisser moi un message !</h2>
+            <div className={(hover && "_hover") + " container p-4"} onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} >
+                <h2 className="text-center">Laissez moi un message !</h2>
 
 
                 <form onSubmit={handleSubmit}>
@@ -141,8 +136,8 @@ const Formulaire = () => {
 
 
                     <div className="form-group">
-                        <button type="submit" className="btn btn-success">Envoyer</button>
-                        <Link to="/customers" className="btn btn-link">retour a la liste</Link>
+                        <button type="submit" className="btn btn-success btn-lg m-4">Envoyer</button>
+                        {/* <Link to="/customers" className="btn btn-link">retour a la liste</Link> */}
                     </div>
                 </form>
 

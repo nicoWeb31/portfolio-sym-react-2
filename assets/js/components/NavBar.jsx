@@ -32,11 +32,11 @@ const NavBar = () => {
 
                         <li className="nav-item  mr-auto pl-5 ">
                             
-                            <Link to="/" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{home} <span className="mx-3">Acceuil</span></Link>
+                            <Link to="/" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{home} <span className="mx-3">Accueil</span></Link>
                         </li>
 
                         <li className="nav-item  mx-auto pl-5 ">
-                            <h2 className=" h2 text-bold text-dark text-center" style={text} >Develloper Web</h2>
+                            <h2 className=" h2 text-bold text-dark text-center" style={text} >Développeur Web</h2>
                             <h3 className=" h2 text-bold text-dark text-center">Symfony - React</h3>
                         </li>
 

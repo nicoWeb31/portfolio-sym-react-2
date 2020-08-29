@@ -62,7 +62,7 @@ const Tech = () => {
     return (
         <>
             <div className="container p-4" onMouseEnter={toggleHover} onMouseLeave={toggleHover} style={linkBorder}>
-                <h1 className="text-center">“Compétence / Tecno”</h1>
+                <h1 className="text-center">“Compétence / Techno”</h1>
 
                 <div className="row mt-5">
                     <div className="col-4"></div>
@@ -79,7 +79,7 @@ const Tech = () => {
                             <CardTech bg="green" name="/img/html60.png" level="Html" autre=" utilisation quotidienne" />
                             <CardTech bg="green" name="/img/css360.png" level="Css" autre=" utilisation quotidienne" />
                             <CardTech bg="green" name="/img/js60.png" level="js - jsx -typescript" autre=" utilisation quotidienne" />
-                            <CardTech bg="green" name="/img/php60h.png" level="PHP - mysql" autre=" utilisation reguliere" />
+                            <CardTech bg="green" name="/img/php60h.png" level="PHP - mysql" autre=" utilisation régulière" />
 
                         </div>
                         <div className='col'></div>
@@ -92,13 +92,13 @@ const Tech = () => {
                         <div className="col-8">
 
                             <h1 className="display-6 text-center"></h1>
-                            <h3 className="lead text-center p-3">Meilleurs amis : </h3>
+                            <h2 className="text-center p-3">Framework : </h2>
 
-                            <div className="row  d-flex justify-content-around">
+                            <div className="row  d-flex justify-content-between">
 
-                                <CardTech bg="Light Gray" name="/img/react2.png" level="React" autre="notion correct du fonctionnement global du framwork -- Plusieur petits projets" />
-                                <CardTech bg="Light Gray" name="/img/symfony.png" level="Symfony 4/5" autre="notion correct du fonctionnement global du framwork -- Plusieur petits projets -- api/apiplatform" />
-                                <CardTech bg="Light Gray" name="/img/angu.png" level="Angular 8/9" autre="notion correct du fonctionnement global du framwork -- creation d'une interface -- rxjs --observable " />
+                                <CardTech bg="Light Gray" name="/img/react2.png" level="React" autre="notion correct du fonctionnement global du framework, hook -- Plusieurs projets" />
+                                <CardTech bg="Light Gray" name="/img/symfony.png" level="Symfony 4/5" autre="notion correct du fonctionnement global du framework -- Plusieurs projets -- api/apiplatform" />
+                                {/* <CardTech bg="Light Gray" name="/img/angu.png" level="Angular 8/9" autre="notion correct du fonctionnement global du framwork -- creation d'une interface -- rxjs --observable " /> */}
 
                             </div>
 
