@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import NavBar from "./components/NavBar";
 import { HashRouter, Switch, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage"
+import HomePage from "./pages/HomePage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -40,7 +42,9 @@ const App = () => {
 
             <Footer/>
 
+        <ToastContainer/>
         </HashRouter>
+        
 
 
 

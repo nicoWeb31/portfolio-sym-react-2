@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Field from '../form/Field';
-import messageService from "../../service/messageService"
+import messageService from "../../service/messageService";
+import {toast} from "react-toastify";
 
 
 import "./contact.css"
@@ -48,7 +49,7 @@ const Formulaire = () => {
 
 
             const response = await messageService.create(message);
-            //toast.success("le client a bien été crée ! ")
+            toast.success("Votre message a bien été envoyer ! ")
             //history.replace("/customers");*
             console.log(response);
             setMessage({
@@ -68,7 +69,7 @@ const Formulaire = () => {
                 })
                 console.log(apiErr);
 
-                //toast.error("des erreurs dans le formulaire ! ")
+                toast.error("Vous avez des erreurs dans le formulaire ! ")
                 setErrors(apiErr);
             }
         }
