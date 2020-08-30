@@ -32,7 +32,7 @@ const Formulaire = () => {
         lastName: "",
         firstName: "",
         email: "",
-        company: ""
+        message: ""
     })
 
     const handleChange = (e) => {
@@ -111,27 +111,28 @@ const Formulaire = () => {
                         type="email"
                     />
 
-                    {/* <Field
-                    name="message"
-                    label="Mesage"
-                    placeholder="Votre message"
-                    value={message.message}
-                    onChanges={handleChange}
-                    error={errors.message}
-                    
-                /> */}
-                    <textarea id="w3review" name="w3review" rows="4" cols="auto"
-                        name="message"
-                        label="Votre message"
-                        value={message.value}
-                        onChange={handleChange}
-                        placeholder="Votre message"
-                        className="form-control"
 
 
-                    >
+                    <div className="form-group">
+                    <label htmlFor={message.message}>Votre message :</label>
+                        <textarea id="w3review" name="w3review" rows="4" cols="auto"
+                            name="message"
+                            value={message.message}
+                            onChange={handleChange}
+                            placeholder="Votre message"
+                            className={"form-control" + (errors && " is-invalid")}
+                        >
+                        </textarea>
 
-                    </textarea>
+                        {errors.message &&
+                            <p className="invalid-feedback">{errors.message}</p>
+                        }
+                    </div>
+
+
+
+
+
 
 
 
