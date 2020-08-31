@@ -1,4 +1,5 @@
 import axios from "axios";
+import jwt from "jwt-decode"
 
 
 
@@ -46,17 +47,20 @@ function logout() {
 
 function isAuthenticated() {
     const token = window.localStorage.getItem('authToken');
+    console.log(token)
     if (token) {
-        const { exp: expiration } = jwt(token);
-        //console.log(expiration);
-        if (expiration * 1000 > new Date().getTime) {
-            return true
-        } else {
-            return false
-        }
+        // const { exp: expiration } = jwt(token);
+        // console.log(expiration);
+        // if (expiration * 10000000 * 60 * 15 < new Date().getTime) {
+        //     return true
+        // } else {
+        //     return false
+        // }
+        return true
     } else {
         return false
     }
+    
 }
 
 

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import messageApi from '../service/authServise';
+import messageApi from '../service/messageService';
 
 
 
 const MessagePage = () => {
 
-    const [messages, setMessage] = useState({});
+    const [messages, setMessage] = useState([]);
 
     //au chargement du composant
     useEffect(() => {fetchMessages()},[]);
@@ -21,9 +21,10 @@ const MessagePage = () => {
         try{
             const data = await messageApi.findAll()
             setMessage(data) 
+            console.log(data)
             
         }catch(err){
-            toast.error("Une erreur est survenue, impossible de charger les clients !")
+            toast.error("Une erreur est survenue, impossible de charger les messages!")
         }
     }
 
@@ -44,7 +45,7 @@ const MessagePage = () => {
 
                 </thead>
                 <tbody>
-                    {messages.map(message =>
+                    { messages && messages.map(message =>
 
                         <tr key={message.id}>
                             <td>{message.id}</td>

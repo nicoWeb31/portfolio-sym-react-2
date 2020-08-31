@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from "react-dom";
 import NavBar from "./components/NavBar";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import LoginPage from "./pages/LoginPage"
 import 'react-toastify/dist/ReactToastify.css';
 /*
@@ -18,19 +18,23 @@ import '../css/app.css';
 import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
 import authApi from './service/authServise';
+import MessagePage from './pages/MessagePage';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
 
 
-authApi.setUp();
+//authApi.setUp();
 
 const App = () => {
+
+    const isAuth = authApi.isAuthenticated();
+    const[isAuthenticatd, setIsAuth] = useState(isAuth)
 
     return (
 
         <HashRouter>
-            <NavBar />
+            <NavBar isAuth ={isAuthenticatd} onLogout={setIsAuth}/>
 
 
             <main className="container">
@@ -38,6 +42,8 @@ const App = () => {
                     <Route path="/contact" component={ContactPage} />
                     
                     <Route path="/login" component={LoginPage} />
+
+                    <Route path="/messages" component={MessagePage} />
 
                     <Route path="/" component={HomePage} />
 

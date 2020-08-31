@@ -1,5 +1,6 @@
 import { faEnvelope, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Authserv from '../service/authServise'
 import React from 'react';
 import {
     Link
@@ -9,11 +10,19 @@ const home = <FontAwesomeIcon icon={faHome} />
 const env = <FontAwesomeIcon icon={faEnvelope} />
 
 
-const NavBar = () => {
+const NavBar = ({ isAuth, onLogout }) => {
+
+    console.log(isAuth)
+
+    const handlelogout = () => {
+        Authserv.logout();
+        onLogout(false)
+    }
 
     const text = {
+
         color: "#424242",
-        fontFamily:" Lato",
+        fontFamily: " Lato",
         fontSize: "60px",
         textAlign: "center",
     };
@@ -31,7 +40,7 @@ const NavBar = () => {
                     <ul className="navbar-nav w-100">
 
                         <li className="nav-item  mr-auto pl-5 ">
-                            
+
                             <Link to="/" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{home} <span className="mx-3">Accueil</span></Link>
                         </li>
 
@@ -40,15 +49,32 @@ const NavBar = () => {
                             <h3 className=" h2 text-bold text-dark text-center">Symfony - React</h3>
                         </li>
 
+                        {
+                            isAuth && (
+                                <>
+                                    <li className="nav-item ml-auto pr-5 d-flex align-items-center">
+                                        <Link to="/messages" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">Messages</Link>
+                                    </li>
+
+                                    <li className="nav-item ml-auto pr-5 d-flex align-items-center">
+                                        <button className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4" onClick={handlelogout}>Déconnexion</button>
+                                    </li>
+                                </>
+                            )
+                        }
+
+
+
+
                         <li className="nav-item ml-auto pr-5 d-flex align-items-center">
 
                             <Link to="/contact" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{env} <span className="mx-3">Contact</span></Link>
                         </li>
 
                     </ul>
-                    
 
-                    
+
+
 
                 </div>
             </nav>
