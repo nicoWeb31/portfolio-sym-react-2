@@ -29,12 +29,8 @@ const LoginPage = () => {
         e.preventDefault();
         try {
 
-            const response = await authService.authlogin(login);
-            console.log(response);
-            //await axios.post("http://127.0.0.1:8000/api/login_check",login).then(response=>console.log(response))
-            
-            toast.success("connection ok  ! ")
-            
+            await authService.authlogin(login);
+            toast.success("connection ok  ! ")            
 
         } catch (err) {
 

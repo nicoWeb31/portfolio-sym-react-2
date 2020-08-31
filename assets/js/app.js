@@ -17,10 +17,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../css/app.css';
 import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
-
+import authApi from './service/authServise';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
+
+
+authApi.setUp();
 
 const App = () => {
 
