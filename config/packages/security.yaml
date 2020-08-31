@@ -49,7 +49,7 @@ security:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
 
-        - { path: ^/api/messages, roles: IS_AUTHENTICATED_FULLY, methods: [GET] }
+        - { path: ^/api/messages, roles: IS_AUTHENTICATED_FULLY, methods: [GET,DELETE] }
         - { path: ^/api/messages, roles: IS_AUTHENTICATED_ANONYMOUSLY,methods: [POST] }
         
         - { path: ^/api/login_ch, roles: IS_AUTHENTICATED_ANONYMOUSLY }

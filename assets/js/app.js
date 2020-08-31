@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import { ToastContainer, toast } from 'react-toastify';
+import LoginPage from "./pages/LoginPage"
 import 'react-toastify/dist/ReactToastify.css';
 /*
  * Welcome to your app's main JavaScript file!
@@ -32,6 +33,9 @@ const App = () => {
             <main className="container">
                 <Switch>
                     <Route path="/contact" component={ContactPage} />
+                    
+                    <Route path="/login" component={LoginPage} />
+
                     <Route path="/" component={HomePage} />
 
 
