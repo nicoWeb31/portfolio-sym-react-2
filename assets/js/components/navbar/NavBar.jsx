@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import {
     Link
 } from "react-router-dom";
+import "./navbar.style.css"
 
 
 
@@ -43,8 +44,8 @@ const NavBar = (props) => {
                         </li>
 
                         <li className="nav-item  mx-auto pl-5 ">
-                            <h2 className=" h2 text-bold text-dark text-center hT" style={text} >Développeur Web</h2>
-                            <h3 className=" h2 text-bold text-dark text-center">Symfony - React</h3>
+                            <h2 className=" h2 text-bold text-dark text-center hT _heading-primary-main _heading-primary" style={text} >Développeur Web</h2>
+                            <h3 className=" h2 text-bold text-dark text-center _heading-primary-sub _heading-primary">Symfony - React</h3>
                         </li>
 
 

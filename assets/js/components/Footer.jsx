@@ -75,7 +75,7 @@ const Footer = ({history}) => {
                             </>
                         ) :
                         (
-                            <Link to="/login" >Admin</Link>
+                            <Link to="/login">Admin</Link>
 
                         )
                 }

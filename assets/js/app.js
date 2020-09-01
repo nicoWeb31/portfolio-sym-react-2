@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from "react-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import { HashRouter, Switch, Route, withRouter, Redirect } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import { ToastContainer } from 'react-toastify';
