@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import { ToastContainer } from 'react-toastify';
 import LoginPage from "./pages/LoginPage"
 import 'react-toastify/dist/ReactToastify.css';
+import AuthContext from "./components/context/AuthContext"
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -31,31 +32,36 @@ const App = () => {
     const [isAuthenticated, setIsAuth] = useState(isAuth);
     const NavWithRouter = withRouter(NavBar);
 
+    const contextValue = {
+        isAhtenticated:isAuthenticated,
+        setIsAutenticated:setIsAuth
+    }
+
     return (
+        <AuthContext.Provider value={contextValue}>
 
-        <HashRouter>
-            <NavWithRouter isAuth={isAuthenticated} onLogout={setIsAuth} />
+            <HashRouter>
+                <NavWithRouter isAuth={isAuthenticated} onLogout={setIsAuth} />
 
-            <main className="container">
-                <Switch>
-                    <Route path="/contact" component={ContactPage} />
+                <main className="container">
+                    <Switch>
+                        <Route path="/contact" component={ContactPage} />
 
-                    <Route path="/login" render={props => <LoginPage onLogin={setIsAuth} {...props} />} />
+                        <Route path="/login" render={props => <LoginPage onLogin={setIsAuth} {...props} />} />
 
-                    <PrivateRoute path="/messages" isAuth={isAuthenticated} component={MessagePage} />
+                        <PrivateRoute path="/messages" isAuth={isAuthenticated} component={MessagePage} />
 
-                    <Route path="/" component={HomePage} />
+                        <Route path="/" component={HomePage} />
+                    </Switch>
 
+                </main>
 
-                </Switch>
+                <Footer />
 
-            </main>
+                <ToastContainer />
+            </HashRouter>
 
-
-            <Footer />
-
-            <ToastContainer />
-        </HashRouter>
+        </AuthContext.Provider>
 
     )
 }
