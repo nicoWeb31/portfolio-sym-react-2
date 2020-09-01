@@ -78,7 +78,7 @@ const Presentation = () => {
 
                 <div className="jumbotron">
                     <div className="row">
-                        <div className="col-3">
+                        <div className="col-12 col-md-3">
                             <img
                                 src="/img/face.png"
                                 className="w-100 img-fluid"
@@ -87,7 +87,7 @@ const Presentation = () => {
                             />
                         </div>
 
-                        <div className="col-9">
+                        <div className="col-12 col-md-9">
                             <h1 className="display-4 text-center" >
                                 Développeur full stack --- junior{" "}
                             </h1>

@@ -22,7 +22,7 @@ const Contact = () => {
 
 
     return (
-        <div className={(hover && " _hover") + " col-6 d-flex align-items-center"} onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} >
+        <div className={(hover && " _hover") + " col-12 col-md-6 d-flex align-items-center"} onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} >
 
             <div className="d-flex row justify-content-center ">
                 <h3>Email : nico.riot@free.fr</h3>

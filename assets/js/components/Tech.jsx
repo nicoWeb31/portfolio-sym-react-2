@@ -64,17 +64,10 @@ const Tech = () => {
             <div className="container p-4" onMouseEnter={toggleHover} onMouseLeave={toggleHover} style={linkBorder}>
                 <h1 className="text-center">“Compétence / Techno”</h1>
 
-                <div className="row mt-5">
-                    <div className="col-4"></div>
-                    <div className="col-8">
-                        <p></p>
-                    </div>
-                </div>
-
                 <div className="jumbotron">
                     <div className="row">
                         <div className='col'></div>
-                        <div className="col-10 d-flex justify-content-between">
+                        <div className="col-10 d-flex justify-content-between align-items-center flex-column flex-md-row">
 
                             <CardTech bg="green" name="/img/html60.png" level="Html" autre=" utilisation quotidienne" />
                             <CardTech bg="green" name="/img/css360.png" level="Css" autre=" utilisation quotidienne" />

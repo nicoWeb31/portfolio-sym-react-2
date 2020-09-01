@@ -31,9 +31,10 @@ const Reseau = () => {
 
 
     return (
+
         <>
 
-            <div className={(hover && "_hover ") + "container P-2 col-6 "} onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} >
+            <div className={(hover && "_hover ") + "container P-2 col-12 col-md-6"} onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} >
                 <h2 className="text-center">Mes réseaux pro : </h2>
 
                 <div className="d-flex row justify-content-around m-4 p-4">
@@ -41,11 +42,7 @@ const Reseau = () => {
                 <a target="_blank" href="https://github.com/nicoWeb31"><img src="/img/gitbb.png" alt="logo" style={styleLogo} /></a>
 
                 </div>
-
-
             </div>
-
-
 
 
         </>

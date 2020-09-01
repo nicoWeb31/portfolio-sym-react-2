@@ -10,8 +10,10 @@
     font-weight: 400;
     letter-spacing: 35px;
 
-    animation-name: moveInleft;
-    animation-duration: 2s;
+    animation :moveInleft 2S ease-out
+
+    /* animation-name: moveInleft;
+    animation-duration: 2s; */
     
     /*
     animation-delay: 1s;
@@ -27,8 +29,10 @@
     font-weight: 700;
     letter-spacing: 20px;
 
-    animation-name: moveInrigth;
-    animation-duration: 2s;
+    animation :moveInrigth 2s ease-out
+
+    /* animation-name: moveInrigth;
+    animation-duration: 2s; */
 }
 
 @keyframes moveInleft{
