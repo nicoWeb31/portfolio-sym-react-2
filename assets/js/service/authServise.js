@@ -33,7 +33,7 @@ function setUp() {
     if (token) {
         const {exp : expiration} = jwt(token);
         //console.log(expiration);
-        if ((expiration * 1000 * 60 * 20) > new Date().getTime) {
+        if ((expiration * 1000 * 60 * 60 * 20) > new Date().getTime) {
             setAxiosToken(token);
         } 
     }
@@ -51,7 +51,7 @@ function isAuthenticated() {
     if (token) {
         const {exp : expiration} = jwt(token);
         //console.log(expiration);
-        if ((expiration * 1000 * 60 * 20) > new Date().getTime) {
+        if ((expiration * 1000 * 60 * 60 * 20) > new Date().getTime) {
             return true
         } 
         return false

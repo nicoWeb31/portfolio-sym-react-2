@@ -4,6 +4,7 @@ import messageApi from '../service/messageService';
 
 
 
+
 const MessagePage = () => {
 
     const [messages, setMessage] = useState([]);
@@ -12,8 +13,19 @@ const MessagePage = () => {
     useEffect(() => {fetchMessages()},[]);
 
 
-    const deleteMessage = () =>{
-        //todo delete message
+    const deleteMessage = (id) =>{
+
+        const originalMessage = [...messages];
+        setMessage(messages.filter(mess=>mess.id !== id))
+
+        try{
+            messageApi.deleteMessage(id);
+            toast.success(`le message ${id} a bien été suprimer`)
+
+        }catch(err){
+            setMessage(originalMessage)
+            toast.error(`impossiblde de supprimer le message ${id}`)
+        }
     }
 
     //recup des customers
@@ -30,7 +42,10 @@ const MessagePage = () => {
 
     return (
         <>
-            <h1>Listes des messages</h1>
+        <hr className="mt-1 mb-5 bg-dark shadow w-75" />
+            <h1 className ="m-4 text-center">Listes des messages</h1>
+
+            <hr className="mt-1 mb-5 bg-dark shadow w-75" />
 
             <table className="table table-hover">
                 <thead>
@@ -57,7 +72,7 @@ const MessagePage = () => {
 
                             <td>
                                 <button className="btn btn-danger"
-                                    onClick={() => deleteMessage(customer.id)}
+                                    onClick={() => deleteMessage(message.id)}
 
                                 >Suprimer</button>
                             </td>

@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import authServ from '../service/authServise';
+import AuthContext from './context/AuthContext';
 
-const Footer = () => {
+
+
+
+const Footer = ({history}) => {
+
+    const { isAhtenticated, setIsAutenticated } = useContext(AuthContext);
 
     const text = {
         color: "#424242",
@@ -38,17 +46,43 @@ const Footer = () => {
 
     }
 
+    const handlelogout = () => {
+        console.log('toto')
+        authServ.logout();
+        history.push("/");
+        setIsAutenticated(false);
+        toast.success('deconnecté avec succées')
+    }
+
 
     return (
         <footer style={red}>
             <h2 style={text}>
-            <span>
-                Devkgire
+                <span>
+                    Devkgire
             </span>
             </h2>
             <h3 style={text2}>&copy;	DEV PHP/SYMFONY - REACT</h3>
             <h4 style={text3}>© Copyright 2020 - Riot Nicolas</h4>
-            <p className="text-center"><Link to="/login" >Admin</Link></p>
+            <div className="text-center">
+
+                {
+                    isAhtenticated ?
+                        (
+                            <>
+                                <Link to="/messages" >messages</Link>
+                                <button className="btn btn-outline-secondary" onClick={handlelogout}>Déconnexion</button>
+                            </>
+                        ) :
+                        (
+                            <Link to="/login" >Admin</Link>
+
+                        )
+                }
+
+
+
+            </div>
         </footer>
     );
 }

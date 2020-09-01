@@ -7,7 +7,7 @@ import AuthContext from "../components/context/AuthContext"
 
 
 
-const LoginPage = ({history}) => {
+const LoginPage = ({ history }) => {
 
     const { setIsAutenticated } = useContext(AuthContext)
 
@@ -25,7 +25,7 @@ const LoginPage = ({history}) => {
     const handleChange = (e) => {
         const { name, value } = e.currentTarget;
         setLogin({ ...login, [name]: value });
-        
+
     }
 
     const handleSubmit = async (e) => {
@@ -52,9 +52,9 @@ const LoginPage = ({history}) => {
 
                 toast.error("Vous avez des erreurs dans le formulaire ! ")
                 setErrors(apiErr);
-            
+
+            }
         }
-    }
 
     }
 
@@ -62,36 +62,44 @@ const LoginPage = ({history}) => {
     return (
         <>
 
-            <h2>Connection Adminisrtateur</h2>
+            <hr className="mt-1 mb-5 bg-dark shadow w-75" />
+            <h2 className="m-5 text-center">Connection Adminisrtateur</h2>
 
-            <form onSubmit={handleSubmit}>
+            <hr className="mt-1 mb-5 bg-dark shadow w-75" />
 
-                <Field
 
-                    name="username"
-                    label="adresse email"
-                    placeholder="Votre adresse mail de connection"
-                    value={login.username}
-                    onChanges={handleChange}
-                    error={errors.username}
+            <div className="jumbotron">
 
-                />
+                <form onSubmit={handleSubmit}>
 
-                <Field
+                    <Field
 
-                    name="password"
-                    label="mot de passe"
-                    placeholder="Votre Mdp de connection"
-                    value={login.password}
-                    onChanges={handleChange}
-                    error={errors.password}
-                    type="password"
+                        name="username"
+                        label="Adresse email"
+                        placeholder="Votre adresse mail de connection"
+                        value={login.username}
+                        onChanges={handleChange}
+                        error={errors.username}
 
-                />
+                    />
 
-                <button type="submit" className="btn btn-success btn-lg m-4">Envoyer</button>
+                    <Field
 
-            </form>
+                        name="password"
+                        label="mot de passe"
+                        placeholder="Votre Mdp de connection"
+                        value={login.password}
+                        onChanges={handleChange}
+                        error={errors.password}
+                        type="password"
+
+                    />
+
+                    <button type="submit" className="btn btn-success btn-lg m-4">Envoyer</button>
+
+                </form>
+
+            </div>
 
         </>
     );

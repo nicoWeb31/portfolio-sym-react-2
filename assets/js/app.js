@@ -16,6 +16,7 @@ import AuthContext from "./components/context/AuthContext"
 
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.css';
+import './main.css';
 import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
 import authApi from './service/authServise';
@@ -24,13 +25,19 @@ import PrivateRoute from './components/privateRoute/PrivateRoute';
 
 
 
+
 authApi.setUp();
 
 const App = () => {
 
+
+
+
     const isAuth = authApi.isAuthenticated();
     const [isAuthenticated, setIsAuth] = useState(isAuth);
     const NavWithRouter = withRouter(NavBar);
+    const FooterWithRouter = withRouter(Footer);
+
 
     const contextValue = {
         isAhtenticated:isAuthenticated,
@@ -56,7 +63,7 @@ const App = () => {
 
                 </main>
 
-                <Footer />
+                <FooterWithRouter />
 
                 <ToastContainer />
             </HashRouter>
