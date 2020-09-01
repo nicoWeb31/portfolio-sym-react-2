@@ -18,7 +18,7 @@ const PlusPres = () => {
     le vaste monde du web, autodidacte et interessé par plein de domaine, j'ai jeté mon devolu sur un domaine qui m'a toujours semblé inaccessible </p>
 
                     </div>
-                    <div className="col-12 col-md-3 m-4">
+                    <div className="col-12 col-md-3 mt-4">
                         <div className="card border-danger mb-3" style={cardStyle}>
                             <div className="card-header">Comminge - Haute-Garonne </div>
                             <div className="card-body">

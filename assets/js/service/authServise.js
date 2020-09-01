@@ -1,11 +1,12 @@
 import axios from "axios";
-import jwt from "jwt-decode"
+import jwt from "jwt-decode";
+import {LOGIN_API} from "../config"
 
 
 
 function authlogin(login) {
 
-    return axios.post("http://127.0.0.1:8000/api/login_check", login)
+    return axios.post(LOGIN_API, login)
 
         .then(resp => resp.data.token)
         .then(token => {
