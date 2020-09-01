@@ -1,24 +1,25 @@
 import { faEnvelope, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Authserv from '../service/authServise'
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     Link
 } from "react-router-dom";
 import { toast } from 'react-toastify';
+import AuthContext from './context/AuthContext'
 
 const home = <FontAwesomeIcon icon={faHome} />
 const env = <FontAwesomeIcon icon={faEnvelope} />
 
 
-const NavBar = ({ isAuth, onLogout, history }) => {
+const NavBar = ({ history }) => {
 
-    console.log(isAuth)
+    const {isAhtenticated,setIsAutenticated} = useContext(AuthContext);
 
     const handlelogout = () => {
         Authserv.logout();
         history.push("/");
-        onLogout(false);
+        setIsAutenticated(false);
         toast.success('deconnecté avec succées')
     }
 
@@ -53,7 +54,7 @@ const NavBar = ({ isAuth, onLogout, history }) => {
                         </li>
 
                         {
-                            isAuth && (
+                            isAhtenticated && (
                                 <>
                                     <li className="nav-item ml-auto pr-5 d-flex align-items-center">
                                         <Link to="/messages" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">Messages</Link>

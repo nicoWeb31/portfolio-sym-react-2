@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 import Field from '../components/form/Field';
 import authService from "../service/authServise";
+import AuthContext from "../components/context/AuthContext"
 
 
 
 
-const LoginPage = ({onLogin, history}) => {
+const LoginPage = ({history}) => {
+
+    const { setIsAutenticated } = useContext(AuthContext)
 
 
     const [login, setLogin] = useState({
@@ -31,7 +34,7 @@ const LoginPage = ({onLogin, history}) => {
 
             await authService.authlogin(login);
             toast.success("connection ok  ! ");
-            onLogin(true);
+            setIsAutenticated(true);
             history.replace("/");
 
         } catch (err) {

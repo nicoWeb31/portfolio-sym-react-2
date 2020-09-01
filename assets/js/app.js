@@ -41,13 +41,13 @@ const App = () => {
         <AuthContext.Provider value={contextValue}>
 
             <HashRouter>
-                <NavWithRouter isAuth={isAuthenticated} onLogout={setIsAuth} />
+                <NavWithRouter/>
 
                 <main className="container">
                     <Switch>
                         <Route path="/contact" component={ContactPage} />
 
-                        <Route path="/login" render={props => <LoginPage onLogin={setIsAuth} {...props} />} />
+                        <Route path="/login" component={LoginPage} />
 
                         <PrivateRoute path="/messages" isAuth={isAuthenticated} component={MessagePage} />
 
