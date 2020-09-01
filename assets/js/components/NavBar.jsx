@@ -5,18 +5,21 @@ import React from 'react';
 import {
     Link
 } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const home = <FontAwesomeIcon icon={faHome} />
 const env = <FontAwesomeIcon icon={faEnvelope} />
 
 
-const NavBar = ({ isAuth, onLogout }) => {
+const NavBar = ({ isAuth, onLogout, history }) => {
 
     console.log(isAuth)
 
     const handlelogout = () => {
         Authserv.logout();
-        onLogout(false)
+        history.push("/");
+        onLogout(false);
+        toast.success('deconnecté avec succées')
     }
 
     const text = {

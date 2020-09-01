@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -40,9 +41,14 @@ const Footer = () => {
 
     return (
         <footer style={red}>
-            <h2 style={text}>Devkgire</h2>
+            <h2 style={text}>
+            <span>
+                Devkgire
+            </span>
+            </h2>
             <h3 style={text2}>&copy;	DEV PHP/SYMFONY - REACT</h3>
             <h4 style={text3}>© Copyright 2020 - Riot Nicolas</h4>
+            <p className="text-center"><Link to="/login" >Admin</Link></p>
         </footer>
     );
 }

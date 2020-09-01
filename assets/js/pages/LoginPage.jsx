@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import Field from '../components/form/Field';
 import authService from "../service/authServise";
-import axios from "axios"
 
 
 
-const LoginPage = () => {
+
+const LoginPage = ({onLogin, history}) => {
 
 
     const [login, setLogin] = useState({
@@ -30,7 +30,9 @@ const LoginPage = () => {
         try {
 
             await authService.authlogin(login);
-            toast.success("connection ok  ! ")            
+            toast.success("connection ok  ! ");
+            onLogin(true);
+            history.replace("/");
 
         } catch (err) {
 

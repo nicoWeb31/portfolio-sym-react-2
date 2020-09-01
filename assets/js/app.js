@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from "react-dom";
 import NavBar from "./components/NavBar";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route, withRouter, Redirect } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import { ToastContainer} from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import LoginPage from "./pages/LoginPage"
 import 'react-toastify/dist/ReactToastify.css';
 /*
@@ -19,31 +19,30 @@ import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
 import authApi from './service/authServise';
 import MessagePage from './pages/MessagePage';
-
-// Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-// import $ from 'jquery';
+import PrivateRoute from './components/privateRoute/PrivateRoute';
 
 
-//authApi.setUp();
+
+authApi.setUp();
 
 const App = () => {
 
     const isAuth = authApi.isAuthenticated();
-    const[isAuthenticatd, setIsAuth] = useState(isAuth)
+    const [isAuthenticated, setIsAuth] = useState(isAuth);
+    const NavWithRouter = withRouter(NavBar);
 
     return (
 
         <HashRouter>
-            <NavBar isAuth ={isAuthenticatd} onLogout={setIsAuth}/>
-
+            <NavWithRouter isAuth={isAuthenticated} onLogout={setIsAuth} />
 
             <main className="container">
                 <Switch>
                     <Route path="/contact" component={ContactPage} />
-                    
-                    <Route path="/login" component={LoginPage} />
 
-                    <Route path="/messages" component={MessagePage} />
+                    <Route path="/login" render={props => <LoginPage onLogin={setIsAuth} {...props} />} />
+
+                    <PrivateRoute path="/messages" isAuth={isAuthenticated} component={MessagePage} />
 
                     <Route path="/" component={HomePage} />
 
@@ -53,18 +52,12 @@ const App = () => {
             </main>
 
 
-            <Footer/>
+            <Footer />
 
-        <ToastContainer/>
+            <ToastContainer />
         </HashRouter>
-        
-
-
-
 
     )
-
-
 }
 
 const rootElement = document.querySelector("#app");

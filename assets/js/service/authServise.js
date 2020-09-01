@@ -33,7 +33,7 @@ function setUp() {
     if (token) {
         const {exp : expiration} = jwt(token);
         //console.log(expiration);
-        if (expiration * 1000 > new Date().getTime) {
+        if ((expiration * 1000 * 60 * 20) > new Date().getTime) {
             setAxiosToken(token);
         } 
     }
@@ -49,17 +49,15 @@ function isAuthenticated() {
     const token = window.localStorage.getItem('authToken');
     console.log(token)
     if (token) {
-        // const { exp: expiration } = jwt(token);
-        // console.log(expiration);
-        // if (expiration * 10000000 * 60 * 15 < new Date().getTime) {
-        //     return true
-        // } else {
-        //     return false
-        // }
-        return true
-    } else {
+        const {exp : expiration} = jwt(token);
+        //console.log(expiration);
+        if ((expiration * 1000 * 60 * 20) > new Date().getTime) {
+            return true
+        } 
         return false
+            
     }
+    return false
     
 }
 
