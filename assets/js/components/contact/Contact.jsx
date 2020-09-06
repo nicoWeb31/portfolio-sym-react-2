@@ -22,9 +22,9 @@ const Contact = () => {
 
 
     return (
-        <div className={(hover && " _hover") + " col-12 col-md-6 d-flex align-items-center"} onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} >
+        <div className={(hover && " _hover") + " col-12 col-md-6 d-flex justify-content-center"} onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} >
 
-            <div className="d-flex row justify-content-center ">
+            <div className="d-flex justify-content-center align-items-center flex-column">
                 <h3>Email : nico.riot@free.fr</h3>
                 <h3>Tél : 06-63-32-38-36</h3>
                 <h4>Adresse : Impasse larribeau -Montespan</h4>

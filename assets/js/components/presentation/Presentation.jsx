@@ -1,8 +1,9 @@
 import React, { Component, Fragment, useState } from "react";
-import Spinner from "../utils/Spinner"
+import Spinner from "../../utils/Spinner"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
-import PlusPres from "./PlusPres";
+import PlusPres from "../plusPres/PlusPres";
+import "./presentation.style.css"
 
 const plus = <FontAwesomeIcon icon={faPlus} />
 const less = <FontAwesomeIcon icon={faMinus} />
@@ -15,25 +16,6 @@ const Presentation = () => {
     const [loading, setLoading] = useState(false);
     const [showPluss, setShowPlus] = useState(false);
 
-
-
-
-    const photoStyle = {
-        width: '200px',
-        heigt: '300px'
-    }
-
-    let linkBorder;
-    if (hover) {
-
-        linkBorder = {
-            border: '#9933cc 1px solid',
-            transition: '1s'
-        }
-
-    } else {
-        linkBorder = {}
-    }
 
 
     //show plus
@@ -51,50 +33,31 @@ const Presentation = () => {
     }
 
 
-
-    const toggleHoverIn = () => {
-        setHover(true)
-        console.log(hover)
-    }
-
-    const toggleHoverOff = () => {
-        setHover(false)
-        console.log(hover)
-    }
-
-
     return (
 
         <>
-            <div className="container p-4" onMouseEnter={toggleHoverIn} onMouseLeave={toggleHoverOff} style={linkBorder}>
+            <div className="p-4 ">
                 <h1 className="text-center">“A propos de moi”</h1>
 
-                <div className="row mt-5">
-                    <div className="col-4"></div>
-                    <div className="col-8">
-                        <p></p>
-                    </div>
-                </div>
-
-                <div className="jumbotron">
+                <div className="jumbotron _jumbo">
                     <div className="row">
                         <div className="col-12 col-md-3">
                             <img
                                 src="/img/face.png"
-                                className="w-100 img-fluid"
+                                className="w-100 img-fluid _photoStyle"
                                 alt=""
-                                style={photoStyle}
+
                             />
                         </div>
 
                         <div className="col-12 col-md-9">
                             <h1 className="display-4 text-center" >
-                                Développeur full stack --- junior{" "}
+                                Développeur full stack
                             </h1>
-                            <p className="lead">
-                                Actuellement en formation développeur web/php à l'Adrar de
-                                Ramonville. Formation diplômante de niveau III (bac +2), plus
-                                Openclassroom et autres.
+                            <p className="_font-pres">
+                                Concepteur développeur d'application web et web mobile. Formation passée à lAdrar de
+                                Ramonville. Formation diplômante de niveau II (bac +3), plus une dizaine de certifications chez
+                                Openclassroom et Udemy.
                 </p>
                             <hr className="my-4 bg-info" />
 
@@ -111,16 +74,16 @@ const Presentation = () => {
                             </p>
                             <Spinner laodind={loading} />
 
+                            {/* show plus true */}
+                            {showPluss &&
+
+                                <PlusPres />
+
+                            }
 
 
                         </div>
                     </div>
-                    {/* show plus true */}
-                    {showPluss &&
-
-                        <PlusPres />
-
-                    }
 
                 </div>
 

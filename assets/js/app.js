@@ -50,7 +50,7 @@ const App = () => {
             <HashRouter>
                 <NavWithRouter/>
 
-                <main className="container">
+                <main className="container-fluid">
                     <Switch>
                         <Route path="/contact" component={ContactPage} />
 
