@@ -51,6 +51,11 @@ const NavBar = (props) => {
 
                         <li className="nav-item ml-auto pr-5 d-flex align-items-center">
 
+                            <Link to="/competence" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{env} <span className="mx-3">Compétence</span></Link>
+                        </li>
+
+                        <li className="nav-item ml-auto pr-5 d-flex align-items-center">
+
                             <Link to="/contact" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{env} <span className="mx-3">Contact</span></Link>
                         </li>
 
@@ -61,7 +66,7 @@ const NavBar = (props) => {
 
                 </div>
             </nav>
-
+            <hr className="mt-1 mb-5 bg-dark shadow w-75" />
         </>
     );
 }

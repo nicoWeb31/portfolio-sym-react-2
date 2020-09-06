@@ -22,6 +22,7 @@ import Footer from './components/Footer';
 import authApi from './service/authServise';
 import MessagePage from './pages/MessagePage';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
+import Competence from './pages/Competence';
 
 
 
@@ -55,6 +56,9 @@ const App = () => {
                         <Route path="/contact" component={ContactPage} />
 
                         <Route path="/login" component={LoginPage} />
+
+                        <Route path="/competence" component={Competence} />
+
 
                         <PrivateRoute path="/messages" isAuth={isAuthenticated} component={MessagePage} />
 
