@@ -13,7 +13,6 @@ const ContactPage = () => {
         <>
 
 
-            <hr className="mt-1 mb-5 bg-dark shadow w-75" />
 
             <Formulaire />
 
@@ -25,12 +24,6 @@ const ContactPage = () => {
             </div>
 
             <hr className="mt-1 mb-5 bg-dark shadow w-75" />
-
-
-
-
-
-
 
 
         </>

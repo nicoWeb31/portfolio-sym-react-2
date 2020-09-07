@@ -36,27 +36,31 @@ const NavBar = (props) => {
                 </button>
 
                 <div className="collapse navbar-collapse _navBar" id="navbarColor01">
-                    <ul className="navbar-nav w-100">
+                    <ul className="navbar-nav mr-auto">
 
                         <li className="nav-item mr-auto pl-5 active ">
 
-                            <Link to="/" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{home} <span className="mx-3">Accueil</span></Link>
+                            <Link to="/" className="nav-link h2 text-bold text-dark m-2 p-4">{home}</Link>
                         </li>
 
-                        <li className="mx-auto pl-5 ">
-                            <h2 className=" h2 text-bold text-dark text-center hT _heading-primary-main _heading-primary" style={text} >Développeur Web</h2>
-                            <h3 className=" h2 text-bold text-dark text-center _heading-primary-sub _heading-primary">Symfony - React</h3>
+                        <li className="nav-item pr-5 d-flex align-items-center">
+
+
+
+                            <Link to="/competence" className="nav-link h5 text-dark  m-2 p-4"> <span className="mx-3">Compétence</span></Link>
                         </li>
 
 
+                        <li className="nav-item pr-5 d-flex align-items-center">
+
+                            <Link to="/rea" className="nav-link h5 text-dark m-2 p-4"> <span className="mx-3">Réalisationp</span></Link>
+                        </li>
+
+                    </ul>
+                    <ul className="navbar-nav ml-auto">
                         <li className="nav-item ml-auto pr-5 d-flex align-items-center">
 
-                            <Link to="/competence" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{env} <span className="mx-3">Compétence</span></Link>
-                        </li>
-
-                        <li className="nav-item ml-auto pr-5 d-flex align-items-center">
-
-                            <Link to="/contact" className="nav-link h2 text-bold text-dark btn btn-outline-secondary m-2 p-4">{env} <span className="mx-3">Contact</span></Link>
+                            <Link to="/contact" className="nav-link h2 text-bold text-dark m-2 p-4">{env} </Link>
                         </li>
 
                     </ul>
@@ -64,8 +68,11 @@ const NavBar = (props) => {
 
 
 
+
                 </div>
             </nav>
+            <h2 className=" h2 text-bold text-dark text-center hT _heading-primary-main _heading-primary" style={text} >Développeur Web</h2>
+            <h3 className=" h2 text-bold text-dark text-center _heading-primary-sub _heading-primary">Symfony - React</h3>
             <hr className="mt-1 mb-5 bg-dark shadow w-75" />
         </>
     );

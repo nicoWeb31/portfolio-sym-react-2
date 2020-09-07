@@ -23,15 +23,12 @@ import authApi from './service/authServise';
 import MessagePage from './pages/MessagePage';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
 import Competence from './pages/Competence';
-
-
+import Realisation from './pages/Realisation';
 
 
 authApi.setUp();
 
 const App = () => {
-
-
 
 
     const isAuth = authApi.isAuthenticated();
@@ -58,6 +55,9 @@ const App = () => {
                         <Route path="/login" component={LoginPage} />
 
                         <Route path="/competence" component={Competence} />
+
+                        <Route path="/rea" component={Realisation} />
+
 
 
                         <PrivateRoute path="/messages" isAuth={isAuthenticated} component={MessagePage} />
