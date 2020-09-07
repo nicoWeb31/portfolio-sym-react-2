@@ -1,7 +1,5 @@
 import React from 'react';
 import Presentation from '../components/presentation/Presentation';
-import Realisation from '../components/Realisation';
-import Tech from '../components/Tech';
 
 
 
