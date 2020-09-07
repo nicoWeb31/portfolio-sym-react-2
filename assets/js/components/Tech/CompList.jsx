@@ -2,53 +2,57 @@ import React from 'react';
 
 const CompList = () => {
     return (
-        <div className="jumbotron jumbotron-fluid">
-                    <div className="container">
-                        <h3 className=" text-center">Conception d'application web/webmobile</h3>
+        <div className="row">
+            <div className="col"></div>
+            <div className="jumbotron jumbotron-fluid col-12 col-md-8">
+                <div className="container">
+                    <h3 className=" text-center">Conception d'application web/webmobile</h3>
 
-                        <ul className="text-center">
-                            <li>
-                                Maquetter une application
+                    <ul className="text-center">
+                        <li>
+                            Maquetter une application
                             </li>
-                            <li>
-                                Développer une interface utilisateur de type desktop
+                        <li>
+                            Développer une interface utilisateur de type desktop
                             </li>
-                            <li>
-                                Développer des composants d’accès aux données
+                        <li>
+                            Développer des composants d’accès aux données
                             </li>
-                            <li>
-                                Développer la partie front-end d’une interface utilisateur
-                                web
+                        <li>
+                            Développer la partie front-end d’une interface utilisateur
+                            web
                             </li>
-                            <li>
-                                Développer la partie back-end d’une interface utilisateur
-                                web
+                        <li>
+                            Développer la partie back-end d’une interface utilisateur
+                            web
                             </li>
-                            <li>
-                                Concevoir une base de données
+                        <li>
+                            Concevoir une base de données
                             </li>
-                            <li>
-                                Mettre en place une base de données
+                        <li>
+                            Mettre en place une base de données
                             </li>
-                            <li>
-                                Développer des composants dans le langage d’une
-                                base de données
+                        <li>
+                            Développer des composants dans le langage d’une
+                            base de données
                             </li>
-                            <li>
-                                Concevoir une application
+                        <li>
+                            Concevoir une application
                             </li>
-                            <li>
-                                Développer des composants métier
+                        <li>
+                            Développer des composants métier
                             </li>
-                            <li>
-                                Construire une application organisée en couches
+                        <li>
+                            Construire une application organisée en couches
                             </li>
-                            <li>
-                                Préparer et exécuter le déploiement d’une application
+                        <li>
+                            Préparer et exécuter le déploiement d’une application
                             </li>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
+            </div>
+            <div className="col"></div>
+        </div>
     );
 }
 
