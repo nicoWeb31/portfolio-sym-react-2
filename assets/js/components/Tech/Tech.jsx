@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 import Spinner from "../../utils/Spinner";
 import FlipCardTech from "../cardTech/FlipCardTech";
 import PlusCompTech from '../PlusCompTech';
+import CompList from "../Tech/CompList"
 
 //css
-import "./tech.style.css" 
+import "./tech.style.css"
 
 
 const plus = <FontAwesomeIcon icon={faPlus} />
@@ -41,8 +42,12 @@ const Tech = () => {
             <div className=" p-4" >
                 <h1 className="text-center">“Compétence / Techno”</h1>
 
-                <div className="jumbotron _jumbotron">
-                    
+                
+                <CompList/>
+
+
+                <div className="jumbotron _jumbotron pt-2">
+
 
                     <div className="row p-5">
 
@@ -50,13 +55,13 @@ const Tech = () => {
                         <div className="col-8">
 
                             <h1 className="display-6 text-center"></h1>
-                            <h2 className="text-center p-3">Framework : </h2>
+                            <h2 className="text-center pb-5">Framework : </h2>
 
                             <div className="row  d-flex justify-content-around">
 
 
-                                <FlipCardTech version="16+" bg="Light Gray" name="/img/react2.png" level="React" autre="Notion correct du fonctionnement global du framework, Hook, Context, -- Plusieurs projets" />
-                                <FlipCardTech version="4/5" bg="Light Gray" name="/img/symfony.png" level="Symfony 4/5" autre="Notion correct du fonctionnement global du framework -- Plusieurs projets -- api/apiplatform" />
+                                <FlipCardTech version="16+" bg="Light Gray" name="/img/react2.png" level="React" autre="Notion correct du fonctionnement global du framework, Hook, Context, Jsx -- Plusieurs projets" />
+                                <FlipCardTech version="4/5" bg="Light Gray" name="/img/symfony.png" level="Symfony 4/5" autre="Notion correct du fonctionnement global du framework -- Plusieurs projets -- api/apiplatform, Twig" />
 
                             </div>
 
