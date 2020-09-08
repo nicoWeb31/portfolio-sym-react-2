@@ -9,12 +9,12 @@ const PlusCompTech = () => {
 <div className="col"></div>
         <div className="jumbotron col-6">
 
-            <h2 className=" text-center p-5 h1">Outils du quotidien ! </h2>
+            <h2 className=" text-center p-5 h1">Outils ! </h2>
             <div className="d-flex justify-content-around">
-                <img src="/img/github.svg" alt="git" width="90px" className="img-fluid" />
-                <img src="/img/boot.svg" alt="git" width="90px" />
-                <img src="/img/mint.png" alt="git" width="90px" />
-                <img src="/img/post.svg" alt="git" width="90px" />
+                <img src="/img/github.svg" alt="git" width="90px" />
+                <img src="/img/boot.svg" alt="bootstrap" width="90px" />
+                <img src="/img/mint.png" alt="linux" width="90px" />
+                <img src="/img/post.svg" alt="postman" width="90px" />
 
             </div>
 

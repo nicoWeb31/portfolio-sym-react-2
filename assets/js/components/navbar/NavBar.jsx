@@ -47,13 +47,13 @@ const NavBar = (props) => {
 
 
 
-                            <Link to="/competence" className="nav-link h5 text-dark  m-2 p-4"> <span className="mx-3">Compétence</span></Link>
+                            <Link to="/competence" className="nav-link h5 text-dark  m-2 p-4 _police _font-size">Compétences</Link>
                         </li>
 
 
                         <li className="nav-item pr-5 d-flex align-items-center">
 
-                            <Link to="/rea" className="nav-link h5 text-dark m-2 p-4"> <span className="mx-3">Réalisationp</span></Link>
+                            <Link to="/rea" className="nav-link h5 text-dark m-2 p-4 _police _font-size">Réalisations</Link>
                         </li>
 
                     </ul>
