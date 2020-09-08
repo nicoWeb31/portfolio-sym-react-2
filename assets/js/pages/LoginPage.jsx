@@ -60,9 +60,9 @@ const LoginPage = ({ history }) => {
 
 
     return (
-        <>
+        <div className="container">
 
-            <hr className="mt-1 mb-5 bg-dark shadow w-75" />
+
             <h2 className="m-5 text-center">Connection Adminisrtateur</h2>
 
             <hr className="mt-1 mb-5 bg-dark shadow w-75" />
@@ -101,7 +101,7 @@ const LoginPage = ({ history }) => {
 
             </div>
 
-        </>
+        </div>
     );
 }
 
