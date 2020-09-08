@@ -74,6 +74,9 @@ Encore
 
 Encore.configureDefinePlugin(options =>{
     options["process.env"].API_URL = process.env.API_URL;
+    options["process.env"].REACT_APP_GITHUB_CLIENT_ID = process.env.GIT_ID;
+    options["process.env"].REACT_APP_GITHUB_CLIENT_SECRET = process.env.GIT_SECRET;
+
 });
 
 module.exports = Encore.getWebpackConfig();
