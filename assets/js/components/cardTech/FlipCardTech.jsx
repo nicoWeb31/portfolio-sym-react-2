@@ -10,7 +10,7 @@ const FlipCardTech = ({ autre, name, bg, level,version }) => {
 
     return (
 
-        <div className="flip-card">
+        <div className="flip-card _cardmargin">
             <div className="flip-card-inner">
                 <div className="flip-card-front">
                     <div className="card-header text-center text-white">

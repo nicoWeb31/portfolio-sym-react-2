@@ -7,7 +7,7 @@ const PlusCompTech = () => {
         <div className="row">
 
 <div className="col"></div>
-        <div className="jumbotron col-6">
+        <div className="jumbotron col-12 col-md-6">
 
             <h2 className=" text-center p-5 h1">Outils ! </h2>
             <div className="d-flex justify-content-around">
