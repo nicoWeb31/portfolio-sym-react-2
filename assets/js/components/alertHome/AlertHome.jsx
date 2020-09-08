@@ -14,8 +14,8 @@ const AlertHome = () => {
                 <div className="jumbotron col-md-8 _alertAcc">
                     <div className="text-center m-4">{alert}{alert}{alert}</div>
 
-                    <p>Actuellement a la rechercher d'une mission, ou d'un poste de devéllopeur web, ouvert a toute proposition, n'hésitez pas a me contacter !</p>
-                    <p>En attendant je monte en compétence sur React et Symfony, via des petits projets fullStack, redux et au programme. </p>
+                    <p>Actuellement à la recherche d'une mission et/ou d'un poste de devéloppeur web, je suis ouvert à toute proposition. N'hésitez pas à me contacter !</p>
+                    <p>En attendant je monte en compétence sur React et Symfony via des projets fullStack, redux est également au programme !!! </p>
                     <div className="text-center m-4">{alert}{alert}{alert}</div>
                 </div>
                 <div className="col"></div>
