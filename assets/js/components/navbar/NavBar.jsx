@@ -16,17 +16,6 @@ const NavBar = (props) => {
 
 
 
-
-
-    const text = {
-
-        color: "#424242",
-        fontFamily: " Lato",
-        fontSize: "60px",
-        textAlign: "center",
-    };
-
-
     return (
         <>
 
@@ -71,7 +60,7 @@ const NavBar = (props) => {
 
                 </div>
             </nav>
-            <h2 className=" h2 text-bold text-dark text-center hT _heading-primary-main _heading-primary" style={text} >Développeur Web</h2>
+            <h2 className=" h2 text-bold text-dark text-center hT _heading-primary-main _heading-primary" >Développeur Web</h2>
             <h3 className=" h2 text-bold text-dark text-center _heading-primary-sub _heading-primary">Symfony - React</h3>
             <hr className="mt-1 mb-5 bg-dark shadow w-75" />
         </>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import Spinner from "../../utils/Spinner";
 import FlipCardTech from "../cardTech/FlipCardTech";
-import PlusCompTech from '../PlusCompTech';
+import PlusCompTech from '../plusCompTech/PlusCompTech';
 import CompList from "../Tech/CompList"
 
 //css

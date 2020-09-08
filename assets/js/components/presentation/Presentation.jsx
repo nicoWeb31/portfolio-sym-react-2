@@ -37,7 +37,7 @@ const Presentation = () => {
 
         <>
             <div className="p-4 ">
-                <h1 className="text-center">“A propos de moi”</h1>
+                
 
                 <div className="jumbotron _jumbo">
                     <div className="row">
@@ -52,7 +52,7 @@ const Presentation = () => {
 
                         <div className="col-12 col-md-9">
                             <h1 className="display-4 text-center" >
-                                Développeur full stack
+                                "Développeur full stack"
                             </h1>
                             <p className="_font-pres">
                                 Concepteur développeur d'application web et web mobile. Formation passée à lAdrar de

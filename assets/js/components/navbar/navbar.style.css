@@ -74,17 +74,17 @@
 
     ._heading-primary-main{
         display: block;
-        font-size: 30px !important;
+        font-size: 26px !important;
         font-weight: 200 !important;
-        letter-spacing: 15px !important;
+        letter-spacing: 12px !important;
     }
     
 
     ._heading-primary-sub{
         display: block;
-        font-size: 25px !important;
-        font-weight: 300 !important;
-        letter-spacing: 15px !important;
+        font-size: 23px !important;
+        font-weight: 200 !important;
+        letter-spacing: 12px !important;
     
         animation :moveInrigth 2s ease-out
     }

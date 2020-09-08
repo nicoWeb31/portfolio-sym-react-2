@@ -1,0 +1,27 @@
+._imgComp{
+    width: 100px !important;
+    height: auto !important;
+}
+
+
+
+/* media query */
+
+@media only screen and (max-width:768px) {
+
+
+    ._imgComp{
+        width: 90px !important;
+        height: auto !important;
+        margin: 10px !important;
+    }
+    
+    ._respCont{
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+
+
+
+}
