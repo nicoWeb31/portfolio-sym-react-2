@@ -11,8 +11,7 @@ const less = <FontAwesomeIcon icon={faMinus} />
 
 const Presentation = () => {
 
-    //state
-    const [hover, setHover] = useState(false);
+
     const [loading, setLoading] = useState(false);
     const [showPluss, setShowPlus] = useState(false);
 
@@ -37,7 +36,7 @@ const Presentation = () => {
 
         <>
             <div className="p-4 ">
-                
+
 
                 <div className="jumbotron _jumbo">
                     <div className="row">
@@ -51,14 +50,19 @@ const Presentation = () => {
                         </div>
 
                         <div className="col-12 col-md-9">
-                            <h1 className="display-4 text-center" >
+                            <h1 className="display-4 text-center mb-4" >
                                 "Développeur full stack"
                             </h1>
                             <p className="_font-pres">
-                                Concepteur développeur d'application web et web mobile. Formation passée à lAdrar de
-                                Ramonville. Formation diplômante de niveau II (bac +3), plus une dizaine de certifications chez
-                                Openclassroom et Udemy.
-                </p>
+                                Concepteur développeur d'application web et web mobile. Formation passée à l'Adrar de
+                                Ramonville. Formation diplômante de niveau II (bac +3).
+                            </p>
+                            <p className="_font-pres">
+                                Ainsi qu'une dizaine de certifications chez Openclassroom et Udemy.
+                            </p>
+
+
+
                             <hr className="my-4 bg-info" />
 
                             <p className="lead">

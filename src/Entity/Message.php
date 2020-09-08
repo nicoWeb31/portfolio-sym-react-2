@@ -26,8 +26,8 @@ class Message
      * @Assert\Length(
      *      min = 3,
      *      max = 50,
-     *      minMessage = "Votre prénom doit avoir plus de {{ limit }} charactére",
-     *      maxMessage = "Votre prénom doit avoir moins de {{ limit }} charactére",
+     *      minMessage = "Votre prénom doit avoir plus de {{ limit }} caractères",
+     *      maxMessage = "Votre prénom doit avoir moins de {{ limit }} caractères",
      *      allowEmptyString = false
      * )
      */
@@ -39,8 +39,8 @@ class Message
      * @Assert\Length(
      *      min = 3,
      *      max = 50,
-     *      minMessage = "Votre nom doit avoir plus de {{ limit }} charactére",
-     *      maxMessage = "YVotre nom doit avoir plus de {{ limit }} charactére",
+     *      minMessage = "Votre nom doit avoir plus de {{ limit }} caractères",
+     *      maxMessage = "Votre nom doit avoir plus de {{ limit }} caractères",
      *      allowEmptyString = false
      * )
      */
@@ -48,8 +48,8 @@ class Message
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank(message="l'adresse email du customer est obligatoire !")
-     * @Assert\Email(message="le format de l'adresse email doit etre valide")
+     * @Assert\NotBlank(message="L'adresse email est obligatoire !")
+     * @Assert\Email(message="le format de l'adresse email doit être valide !")
      */
     private $email;
 
@@ -59,8 +59,8 @@ class Message
      * @Assert\Length(
      *      min = 30,
      *      max = 2500,
-     *      minMessage = "Votre message doit avoir plus de {{ limit }} charactére",
-     *      maxMessage = "YVotre message doit avoir plus de {{ limit }} charactére",
+     *      minMessage = "Votre message doit avoir plus de {{ limit }} caractères",
+     *      maxMessage = "Votre message doit avoir plus de {{ limit }} caractères",
      *      allowEmptyString = false
      * )
      */
