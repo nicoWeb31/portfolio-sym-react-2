@@ -63,7 +63,7 @@ const LoginPage = ({ history }) => {
         <div className="container">
 
 
-            <h2 className="m-5 text-center">Connection Adminisrtateur</h2>
+            <h2 className="m-5 text-center">Connexion Admin</h2>
 
             <hr className="mt-1 mb-5 bg-dark shadow w-75" />
 
@@ -76,7 +76,7 @@ const LoginPage = ({ history }) => {
 
                         name="username"
                         label="Adresse email"
-                        placeholder="Votre adresse mail de connection"
+                        placeholder="Votre adresse email de connexion"
                         value={login.username}
                         onChanges={handleChange}
                         error={errors.username}
@@ -87,7 +87,7 @@ const LoginPage = ({ history }) => {
 
                         name="password"
                         label="mot de passe"
-                        placeholder="Votre Mdp de connection"
+                        placeholder="Votre mot de pass de connexion"
                         value={login.password}
                         onChanges={handleChange}
                         error={errors.password}
