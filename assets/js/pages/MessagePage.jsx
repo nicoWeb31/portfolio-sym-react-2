@@ -13,17 +13,18 @@ const MessagePage = () => {
     useEffect(() => {fetchMessages()},[]);
 
 
-    const deleteMessage = (id) =>{
+    const deleteMess = async (id) =>{
 
         const originalMessage = [...messages];
         setMessage(messages.filter(mess=>mess.id !== id))
 
         try{
-            messageApi.deleteMessage(id);
+            await messageApi.deleteMessage(id);
             toast.success(`le message ${id} a bien été suprimer`)
 
         }catch(err){
             setMessage(originalMessage)
+            setMessage(originalMessage);
             toast.error(`impossiblde de supprimer le message ${id}`)
         }
     }
@@ -31,7 +32,7 @@ const MessagePage = () => {
     //recup des customers
     const fetchMessages = async () =>{
         try{
-            const data = await messageApi.findAll()
+            const data = await messageApi.findAll();
             setMessage(data) 
             console.log(data)
             
@@ -42,7 +43,6 @@ const MessagePage = () => {
 
     return (
         <>
-        <hr className="mt-1 mb-5 bg-dark shadow w-75" />
             <h1 className ="m-4 text-center">Listes des messages</h1>
 
             <hr className="mt-1 mb-5 bg-dark shadow w-75" />
@@ -71,8 +71,8 @@ const MessagePage = () => {
                             <td>{message.message}</td>
 
                             <td>
-                                <button className="btn btn-danger"
-                                    onClick={() => deleteMessage(message.id)}
+                                <button className="btn btn-danger" type="button"
+                                    onClick={()=>deleteMess(message.id)}
 
                                 >Suprimer</button>
                             </td>

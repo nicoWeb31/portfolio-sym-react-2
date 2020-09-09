@@ -87,7 +87,7 @@ const LoginPage = ({ history }) => {
 
                         name="password"
                         label="mot de passe"
-                        placeholder="Votre mot de pass de connexion"
+                        placeholder="Votre mot de passe de connexion"
                         value={login.password}
                         onChanges={handleChange}
                         error={errors.password}

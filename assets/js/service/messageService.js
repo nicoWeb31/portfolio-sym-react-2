@@ -12,14 +12,12 @@ function create(message) {
 
 function findAll(){
     return axios.get(MESSAGES_API)
-    .then(response => {
-        return response.data['hydra:member']
-    })
+    .then(response => response.data['hydra:member'])
 }
 
 
 function deleteMessage(id){
-    return axios.delete(`${MESSAGES_API}${id}`)
+    return axios.delete(`${MESSAGES_API}/${id}`)
 }
 
 export default {
