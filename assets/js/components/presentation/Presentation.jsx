@@ -42,9 +42,9 @@ const Presentation = () => {
                     <div className="row">
                         <div className="col-12 col-md-3">
                             <img
-                                src="/img/face.png"
+                                src="/img/me.jpg"
                                 className="w-100 img-fluid _photoStyle"
-                                alt=""
+                                alt="img"
 
                             />
                         </div>

@@ -1,6 +1,8 @@
 ._photoStyle{
     width: 200px;
     height: 300px;
+    box-shadow: 10px 10px 30px -1px rgba(0,0,0,0.75);
+    border-radius: 12%;
 }
 
 ._font-pres{

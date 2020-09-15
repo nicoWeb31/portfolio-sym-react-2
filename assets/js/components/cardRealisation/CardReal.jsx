@@ -1,4 +1,5 @@
 import React from 'react';
+import "./cardReal.style.css"
 
 const CardReal = ({bg,Tech,link,img,description}) => {
 
@@ -10,7 +11,7 @@ const CardReal = ({bg,Tech,link,img,description}) => {
 
 
     return (
-        <div className="card border-warning mb-3" style={cardStyle} >
+        <div className="card border-warning mb-3 _cardRea">
             <div className="card-header text-center text-white" style={{ backgroundColor: bg }}>{Tech}</div>
             <div className="card-body bg-secondary">
 

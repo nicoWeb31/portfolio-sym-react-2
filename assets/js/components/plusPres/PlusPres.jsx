@@ -4,9 +4,6 @@ import "./plusPres.style.css";
 
 const PlusPres = () => {
 
-    const cardStyle = {
-        maxWidth: '20rem'
-    }
 
     return (
         <>
@@ -20,7 +17,7 @@ const PlusPres = () => {
 
                     </div>
                     <div className="col-12 col-md-3 mt-3">
-                        <div className="card border-danger mb-3" style={cardStyle}>
+                        <div className="card border-danger mb-3 _cardPlus" >
                             <div className="card-header text-center _font-pres-plus">Comminges - Haute-Garonne </div>
                             <div className="card-body">
                                 <h4 className="card-title text-center">Riot - Nicolas</h4>
