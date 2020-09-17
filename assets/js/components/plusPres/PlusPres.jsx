@@ -25,7 +25,7 @@ const PlusPres = () => {
                                 <p className="card-title text-center">Permis B</p>
 
 
-                                <p className="card-text _font-pres-plus">37 ans, centre d'intêret : Sport de montagne,Rugby(20ans), bricolage,veille techno, linux, etc...</p>
+                                <p className="card-text _font-pres-plus">Centre d'intêrets : Sport de montagne, Rugby(20ans), bricolage, veille techno, linux, etc...</p>
                             </div>
                         </div>
 

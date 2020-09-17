@@ -91,7 +91,13 @@ const Presentation = () => {
 
                 </div>
 
-
+                <hr className="mt-1 mb-5 bg-dark shadow w-75" />
+                
+                <a href="img/cv.pdf" download  ><img src="img/icon-cv.jpg" alt="icon cv" className="_iconCv" /></a>
+                <h3 className="text-center">Cv pdf</h3>
+                <hr className="mt-1 mb-5 bg-dark shadow w-75" />
+                        
+                        
 
             </div>
 

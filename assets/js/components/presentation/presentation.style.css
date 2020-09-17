@@ -9,8 +9,8 @@
     font-size: 20px !important;
 }
 
-._jumbo{
-    /* background-color:rgba(59, 59, 59, 0.7) !important; */
-    
-
+._iconCv{
+    width: 80px !important;
+    display: block !important;
+    margin: 0px auto !important;
 }
